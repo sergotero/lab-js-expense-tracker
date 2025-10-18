@@ -1,9 +1,6 @@
 // Entry
 class Entry {
-    date;
-    amount;
-    description;
-    
+
     constructor(date, amount, description){
         this.date = date;
         this.amount = amount;
@@ -16,7 +13,13 @@ class Entry {
 }
 
 // Income
-class Income {}
+class Income extends Entry{
+
+    constructor(date, amount, description) {
+        super(date, amount, description);
+        this.type = "income";
+    }
+}
 
 // Expense
 class Expense {}
